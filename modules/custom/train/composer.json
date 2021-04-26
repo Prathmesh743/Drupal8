@@ -1,0 +1,13 @@
+{
+    "name": "train",
+    "type": "drupal-module",
+    "description": "my first train module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/train",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/train",
+        "source": "http://cgit.drupalcode.org/train",
+    },
+}

@@ -1,0 +1,14 @@
+name: train
+type: theme
+description: 'My awesome Train Theme'
+package: Other
+core: 8.x
+libraries:
+  - train/global-styling
+ 
+base theme: stable
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

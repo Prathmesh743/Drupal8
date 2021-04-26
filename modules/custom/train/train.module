@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains train.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function train_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the train module.
+    case 'help.page.train':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('my first train module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/** 
+ * Implement hook_cron()
+ */
+
+function train_cron()
+{
+	  $slogan= \Drupal::service('config.factory')->getEditable('system.site')->get('slogan');
+	  if(is_numeric($slogan))
+	  {
+	  	   $slogan= $slogan + 1;
+
+	  	   $setSlogan= \Drupal::service('config.factory')->getEditable('system.site')->set('slogan', $slogan)->save();
+	  }
+	  else 
+	  {  
+            $setSlogan= \Drupal::service('config.factory')->getEditable('system.site')->set('slogan', 0)->save();
+	  }
+}

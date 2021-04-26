@@ -1,0 +1,17 @@
+global-styling:
+    version: 1.x
+    css:
+     theme:
+       css/bootstrap.min.css: {}
+       css/fontawesome.css: {}
+       css/style.css: {}
+    js:
+      js/jquery.min.js: {}
+      js/bootstrap.bundle.min.js: {}
+      js/custom.js: {}
+      js/owl.js: {}
+      js/slick.js: {}
+      js/isotope.js: {}
+      js/accordions.js: {}
+    dependencies:
+      - core/jquery
